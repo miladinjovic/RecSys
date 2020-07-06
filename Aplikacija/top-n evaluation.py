@@ -41,7 +41,7 @@ knn = KNNBaseline(sim_options = {'name': 'cosine', 'user_based': False}, k=150)
 wh = WeightedHybridAlgorithm(svd, knn, [0.7,0.3])
 contentKNN = ContentKNNAlgorithm()
 
-algo = contentKNN
+algo = svd  # Samo se dodeli promenljivoj algo neka od gore navedenih promenljivih (wh, knn ... ). Na taj način dobijamo evaluacuju odabranog algoritma.
 
 LOOCV = LeaveOneOut(n_splits=1)
 
