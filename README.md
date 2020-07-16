@@ -22,4 +22,4 @@ Opisani princip u delu ContentKNNRecommenders-Accuracy je isti i za ostale skrip
 Fajl top-n evaluation.py ispisuje Recommender metrike za top-n listu za većinu algoritama. Od linije 38 pa do 42 su inicijalizovani algoritmi. Na liniji 44 referenci algo se dodeljuje  refernca algoritma za koga želimo da dobijemo metrike.
 
 knnRecAlgorithm je zapravo implementacija user collaborative filtering algoritma. 
-knn-top n evaluaton.py  ispisuje Recommender metrike za top-n listu za user collaborative algoritam tj. knnRecAlgorithm
+Skritpa knn-top n evaluaton.py  ispisuje Recommender metrike za top-n listu za user collaborative algoritam tj. knnRecAlgorithm
