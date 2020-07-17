@@ -49,7 +49,7 @@ Skripta **CollaborativeRecommenders-Accuracy.py** samo kreira grafikon koji poka
 
 Skripta **ContentKNNRecommenders-Accuracy.py** računa RMSE (**R**oot **M**ean **S**quare **E**rror) metriku ContentKNN algoritma. Prvo se učitaju trening i testni skup, zatim se obavlja obučavanje algoritma na osnovu trening skupa. Nakon toga, sprovodi se evaluacija pomoću testnog skupa.
 Promenljiva **predictions** sadrži listu predikcija tj. listu uređenih četvorki (id korisnika, id filma, ostavljeni rejting, predikcija rejinga).
-Opisani princip rada je isti u skriptama SVD-Accuracy.py i WeightedHybrid-Accuracy.py.
+Opisani princip rada je isti i u skriptama **SVD-Accuracy.py** i **WeightedHybrid-Accuracy.py**.
 
 Fajl **top-n evaluation.py** ispisuje Recommender metrike za top-n listu za većinu algoritama. Na linijama od 38. do 42. inicijalizovani su različiti algoritmi. Na liniji 44 referenci algo je potrebno dodeliti referencu na algoritam za koga želimo da dobijemo top-n metrike.
 
