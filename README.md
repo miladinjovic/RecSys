@@ -57,5 +57,5 @@ Datoteka **knnRecAlgorithm** je implementacija user collaborative filtering algo
 Skritpa **knn-top n evaluaton.py**  ispisuje Recommender metrike top-n liste za user collaborative algoritam, koji je definisan klasom **knnRecAlgorithm**
 
 ## Napomena
-U folderu **Slike** smešteni su su dijagrami dobijeni pokretanjem skripte exploration.py, kao i skinšotovi rezultata top-n evaluacije različitih algoritama. 
+U folderu **Slike** smešteni su su dijagrami dobijeni pokretanjem skripte exploration.py, kao i skinšotovi rezultata top-n evaluacije različitih algoritama. Datoteka **requirements.txt** sadrži spisak svih potrebnih biblioteka, koji će vam pomoći da lako kreirate venv na vašem računaru.
 U toku je izrada veb aplikacije  koja se zasniva na ovoj aplikaciji. Link do repozitorijuma pomenute veb aplikacije je https://github.com/miladinjovic/RecSys-GUI
