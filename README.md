@@ -27,6 +27,17 @@ U folder R4 dodat je novi fajl *fullSet.txt*, koji obuhvata podatke o rejtinzima
 ## Rad sa podacima
 Potrebne funkcije za rada sa podacima su implementirane u klasi YahooDataset. Konkretnije, trening i testni skup se učitavaju pomoću metode **loadYahooDataset()**, dok se podaci iz fajla *fullSet.txt* učitavaju pozivom metode **loadFullSet()**.
 
+## Pokretanje
+U nastavku se navodi lista fajlova koje možete pokrenuti:
+- exploration.py
+- k-fold validation.py
+- BayesianPersonalizedRanking
+- CollaborativeRecommenders-Accuracy
+- ContentKNNRecommenders-Accuracy
+- SVD-Accuracy
+- WeightedHybrid-Accuracy
+
+
 Moguće je pokrenut sve skripte koje u svom nazivu ne sadrže "Algorithm", osim YahooDataset.py (definicija klase za učitavanje dataseta). 
 U folderu R4 su smešteni dataset fajlovi. U direktorijumu Slike nalaze se slike dobijene pokretanjem odgovarajućih skripti, kao i skrinšotovi nekih rezultata evaluacije (top-n 
 
