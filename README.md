@@ -4,25 +4,8 @@
 ## Uvod 
 Ovaj repozitorijum sadrži implementaciju sistema za preporuku pomoću bilbioteke **Surprise** (https://surprise.readthedocs.io/en/stable/index.html). 
 ## Podaci 
-Skup podataka pod nazivom R4 je dostupan u sklopu **Yahoo! Research Alliance Webscope  programa** i sme se koristiti samo u svrhe nekomercijalnih istraživanja.  On sadrži mali uzorak ocena različitih filmova od strane korisnika **Yahoo! Movies zajednice**. Skup takođe obuhvata informacije o velikom broju filmova koji su se pojavili do novembra 2003. godinе (sinopsis, lista glumaca, lista žanrova kojima film pripada, lista producenata itd).
-Podaci su raspoređeni u šest fajlova (**folder R4**):
-- movie_db_yoda
-- readme
-- WebscopeReadMe
-- ydata-ymovies-mapping-to-eachmovie-v1_0.txt
-- ydata-ymovies-mapping-to-movielens-v1_0.txt
-- ydata-ymovies-user-demographics-v1_0.txt
-- ydata-ymovies-user-movie-ratings-train-v1_0.txt
-- ydata-ymovies-user-movie-ratings-test-v1_0.txt
-
-Celokupan opis svih fajlova možete pronaći u **readme** datoteci.
-
-Datoteka *movie_db_yoda* sadrži podatke o filmovima (id filma, naslov, sinopsis, listu glumaca, listu žanrova itd.)
-Trening skup je smešten u fajlu *ydata-ymovies-user-movie-ratings-train-v1_0.txt*, dok se testni skup nalazi u *ydata-ymovies-user-movie-ratings-test-v1_0.txt*. Oba fajla sadrže id filma, id korisnika, rejting (vrednost na skali od 1 do 13) i *konvertovani* rejting  skaliran na vrednosti od 1 do 5. Prilikom implementacije svih algoritama korišćena je prva skala. 
-
-Datoteka *ydata-ymovies-user-demographics-v1_0.txt* sadrži podatke o polu i godini rođenja korisnika (id korisnika, godina rođenja i pol).
-
-U folder R4 dodat je novi fajl *fullSet.txt*, koji obuhvata podatke o rejtinzima iz trening i testnog skupa, radi lakše implemenacije i evaluacije pojedinih algoritama. 
+Na linku https://tinyurl.com/y2aqxo99 potražite skup podataka R4. Kada preuzmete i raspakujete dataset, postavite ga u folder gde ste preuzeli ovu aplikaciju. 
+U folderu R4 kreirajte novi fajl  *fullSet.txt*, a zatim u njega prvo nalepite sadržaj fajla *ydata-ymovies-user-movie-ratings-train-v1_0.txt*, a potom dodajte sve iz *ydata-ymovies-user-movie-ratings-test-v1_0.txt*.
 
 ## Rad sa podacima
 Potrebne funkcije za rad sa podacima su implementirane u klasi YahooDataset. Konkretnije, trening i testni skup se učitavaju pomoću metode **loadYahooDataset()**, dok se podaci iz fajla *fullSet.txt* učitavaju pozivom metode **loadFullSet()**.
