@@ -1,9 +1,24 @@
 # RecSys
 
 
+## Uvod 
+Ovaj repozitorijum sadrži algoritme iz bilbioteke **Surprise** (https://surprise.readthedocs.io/en/stable/index.html), koji rade sa podacima tj. skupom podataka **R4**, koji je obezbeđen od strane **Research Yahoo! Aliance** (https://tinyurl.com/y2aqxo99).
+
+## Podaci 
+Skup podataka pod nazivom R4 je dostupan u sklopu Yahoo! Research Alliance Webscope  programa i sme se koristiti samo u svrhe nekomercijalnih istraživanja.  On sadrži mali uzorak ocena različitih filmova od strane korisnika Yahoo! Movies zajednice. Skup podataka takođe obuhvata informacije o velikom broju filmova koji su se pojavili do novembra 2003. godinе (sinopsis, lista glumaca, lista žanrova kojima film pripada, niz producenata itd).
+Podaci su raspoređeni u šest fajlova:
+- movie_db_yoda
+- readme
+- WebscopeReadMe
+- ydata-ymovies-mapping-to-eachmovie-v1_0.txt
+- ydata-ymovies-mapping-to-movielens-v1_0.txt
+- ydata-ymovies-user-demographics-v1_0.txt
+- ydata-ymovies-user-movie-ratings-train-v1_0.txt
+- ydata-ymovies-user-movie-ratings-test-v1_0.txt
+
+
 Moguće je pokrenut sve skripte koje u svom nazivu ne sadrže "Algorithm", osim YahooDataset.py (definicija klase za učitavanje dataseta). 
-U folderu R4 su smešteni dataset fajlovi. U direktorijumu Slike nalaze se slike dobijene pokretanjem odgovarajućih skripti, kao i skrinšotovi nekih rezultata evaluacije (top-n metoda).
-Korišćeni algoritmi iz biblioteke Surprise (https://surprise.readthedocs.io/en/stable/index.html).
+U folderu R4 su smešteni dataset fajlovi. U direktorijumu Slike nalaze se slike dobijene pokretanjem odgovarajućih skripti, kao i skrinšotovi nekih rezultata evaluacije (top-n 
 
 Trening i testni skup se učitavaju pomoću metode loadYahooDataset() klase YahooDataset. Oni su već unapred kreirani i dobijaju se prilikom preuzimanja skupa R4.
 
