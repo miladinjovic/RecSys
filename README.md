@@ -41,9 +41,9 @@ U folderu **Aplikacija** se nalaze sve skripte, od kojih je moguće pokrenuti:
 - knn - top n evaluation.py
 
 
-Kako biste se upoznali sa datasetom, najbolje je prvo pokrenuti exploration.py, a zatim k-fold validation. Skripta k-fold validation učitava ceo skup (podatke iz trening i testnog skupa) i vrši k-fold validaciju algoritama implementiranih u surprise. Pomenuti algoritmi su inicijalizovani sa difoltnim parametrima čije vrednosti možete pronaći u dokumentaciji bibloteke surprise (https://surprise.readthedocs.io/en/stable/prediction_algorithms_package.html).
+Kako biste se upoznali sa datasetom, najbolje je prvo pokrenuti **exploration.py**, a zatim **k-fold validation.py**. Skripta k-fold validation.py učitava ceo skup (podatke iz trening i testnog skupa) i vrši k-fold validaciju algoritama iz biblioteke surprise. Pomenuti algoritmi su inicijalizovani difoltnim parametrima čije vrednosti možete pronaći u dokumentaciji bibloteke surprise (https://surprise.readthedocs.io/en/stable/prediction_algorithms_package.html).
 
-Skriptom **BayesianPersonalizedRanking.py** se ispisuje prosečna vrednost AUC metrike, pošto je ovaj algoritam u suštini klasifikator (da li će se korisniku dopasti ili neće određeni proizvod). Takođe, pokretanjem ove skripte generišu se i standardne metrike (hit rate, cumulative hit rate, average reciprocal hit rate itd). Naravno, što su ove vrednosti veće od nule, to je lista koju algoritam generiše "kvalitetnija". Parametre algoritma možete menjati izmenom vrednosti u promenljivi bpr_params. 
+Skriptom **BayesianPersonalizedRanking.py** se ispisuje prosečna vrednost AUC metrike, pošto je ovaj algoritam u suštini klasifikator (da li će se korisniku dopasti ili neće određeni proizvod). Takođe, pokretanjem ove skripte generišu se i standardne metrike top-n evaluacije (hit rate, cumulative hit rate, average reciprocal hit rate itd). Naravno, što su ove vrednosti veće od nule, to je lista koju algoritam generiše "kvalitetnija". Parametre algoritma možete menjati izmenom vrednosti u promenljivi bpr_params. 
 
 Skripta **CollaborativeRecommenders-Accuracy.py** samo kreira grafikon koji pokazuje zavisnost Root Mean Square Error metrike od broja suseda u knn algoritmima koje možete pronaći na linku (https://surprise.readthedocs.io/en/stable/knn_inspired.html). 
 
