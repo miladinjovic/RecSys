@@ -15,6 +15,7 @@ Podaci su raspoređeni u šest fajlova (**folder R4**):
 - ydata-ymovies-user-demographics-v1_0.txt
 - ydata-ymovies-user-movie-ratings-train-v1_0.txt
 - ydata-ymovies-user-movie-ratings-test-v1_0.txt
+
 Celokupan opis svih fajlova možete pronaći u **readme** datoteci.
 
 Datoteka *movie_db_yoda* sadrži podatke o filmovima (id filma, naslov, sinopsis, listu glumaca, listu žanrova itd.)
