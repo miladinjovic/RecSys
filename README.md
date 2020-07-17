@@ -5,7 +5,7 @@
 Ovaj repozitorijum sadrži algoritme iz bilbioteke **Surprise** (https://surprise.readthedocs.io/en/stable/index.html), koji rade sa podacima tj. skupom podataka **R4**, koji je obezbeđen od strane **Research Yahoo! Aliance** (https://tinyurl.com/y2aqxo99).
 
 ## Podaci 
-Skup podataka pod nazivom R4 je dostupan u sklopu **Yahoo! Research Alliance Webscope  programa** i sme se koristiti samo u svrhe nekomercijalnih istraživanja.  On sadrži mali uzorak ocena različitih filmova od strane korisnika **Yahoo! Movies zajednice**. Skup podataka takođe obuhvata informacije o velikom broju filmova koji su se pojavili do novembra 2003. godinе (sinopsis, lista glumaca, lista žanrova kojima film pripada, lista producenata itd).
+Skup podataka pod nazivom R4 je dostupan u sklopu **Yahoo! Research Alliance Webscope  programa** i sme se koristiti samo u svrhe nekomercijalnih istraživanja.  On sadrži mali uzorak ocena različitih filmova od strane korisnika **Yahoo! Movies zajednice**. Skup takođe obuhvata informacije o velikom broju filmova koji su se pojavili do novembra 2003. godinе (sinopsis, lista glumaca, lista žanrova kojima film pripada, lista producenata itd).
 Podaci su raspoređeni u šest fajlova:
 - movie_db_yoda
 - readme
