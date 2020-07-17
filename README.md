@@ -22,13 +22,13 @@ Trening skup je smešten u fajlu *ydata-ymovies-user-movie-ratings-train-v1_0.tx
 
 Datoteka *ydata-ymovies-user-demographics-v1_0.txt* sadrži podatke o polu i godini rođenja korisnika (id korisnika, godina rođenja i pol).
 
-U folder R4 dodat je novi fajl *fullSet.txt*, koji obuhvata podatke o rejtinzima iz trening i testnog skupa. 
+U folder R4 dodat je novi fajl *fullSet.txt*, koji obuhvata podatke o rejtinzima iz trening i testnog skupa, radi lakše implemenacije i evaluacije pojedinih algoritama. 
 
 ## Rad sa podacima
-Potrebne funkcije za rada sa podacima su implementirane u klasi YahooDataset. Konkretnije, trening i testni skup se učitavaju pomoću metode **loadYahooDataset()**, dok se podaci iz fajla *fullSet.txt* učitavaju pozivom metode **loadFullSet()**.
+Potrebne funkcije za rad sa podacima su implementirane u klasi YahooDataset. Konkretnije, trening i testni skup se učitavaju pomoću metode **loadYahooDataset()**, dok se podaci iz fajla *fullSet.txt* učitavaju pozivom metode **loadFullSet()**.
 
 ## Aplikacija
-U folderu **Aplikacija** se nalaze skripte, od kojih je moguće pokrenuti:
+U folderu **Aplikacija** se nalaze sve skripte, od kojih je moguće pokrenuti:
 - exploration.py
 - k-fold validation.py
 - precisionAndRecall.py
@@ -51,7 +51,11 @@ Skripta **ContentKNNRecommenders-Accuracy.py** računa RMSE (**R**oot **M**ean *
 Promenljiva **predictions** sadrži listu predikcija tj. listu uređenih četvorki (id korisnika, id filma, ostavljeni rejting, predikcija rejinga).
 Opisani princip rada je isti u skriptama SVD-Accuracy.py i WeightedHybrid-Accuracy.py.
 
-Fajl **top-n evaluation.py** ispisuje Recommender metrike za top-n listu za većinu algoritama. Od 38. do 42. linije inicijalizovani su različiti algoritmi. Na liniji 44 referenci algo je potrebno dodeliti referencu na algoritam za koga želimo da dobijemo top-n metrike.
+Fajl **top-n evaluation.py** ispisuje Recommender metrike za top-n listu za većinu algoritama. Na linijama od 38. do 42. inicijalizovani su različiti algoritmi. Na liniji 44 referenci algo je potrebno dodeliti referencu na algoritam za koga želimo da dobijemo top-n metrike.
 
 Datoteka **knnRecAlgorithm** je implementacija user collaborative filtering algoritma. 
-Skritpa **knn-top n evaluaton.py**  ispisuje Recommender metrike za top-n listu za user collaborative algoritam definisan klasom **knnRecAlgorithm**
+Skritpa **knn-top n evaluaton.py**  ispisuje Recommender metrike top-n liste za user collaborative algoritam, koji je definisan klasom **knnRecAlgorithm**
+
+## Napomena
+U folderu **Slike** smešteni su su dijagrami dobijeni pokretanjem skripte exploration.py, kao i skinšotovi rezultata top-n evaluacije različitih algoritama. 
+U toku je izrada veb aplikacije  koja se zasniva na ovoj aplikaciji. Link do repozitorijuma pomenute veb aplikacije je https://github.com/miladinjovic/RecSys-GUI
