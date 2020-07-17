@@ -4,7 +4,7 @@
 ## Uvod 
 Ovaj repozitorijum sadrži implementaciju sistema za preporuku pomoću bilbioteke **Surprise** (https://surprise.readthedocs.io/en/stable/index.html). 
 ## Podaci 
-Na linku https://tinyurl.com/y2aqxo99 potražite skup podataka R4. Kada preuzmete i raspakujete dataset, postavite ga u folder gde ste preuzeli ovu aplikaciju. 
+Na linku https://tinyurl.com/y2aqxo99 potražite skup podataka R4. Kada preuzmete i raspakujete dataset, postavite ga u folder gde ste preuzeli ovu aplikaciju (folder RecSys). 
 U folderu R4 kreirajte novi fajl  *fullSet.txt*, a zatim u njega prvo nalepite sadržaj fajla *ydata-ymovies-user-movie-ratings-train-v1_0.txt*, a potom dodajte sve iz *ydata-ymovies-user-movie-ratings-test-v1_0.txt*.
 
 ## Rad sa podacima
