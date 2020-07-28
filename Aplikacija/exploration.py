@@ -49,7 +49,7 @@ for userId in range(trainSet.n_users):
 
 print("Procenat korisnika sa ocenom većom od 9 za više od polovine odgledanih filmova: %.2f" % (numUsers/trainSet.n_users*100))
 
-trainSet = yd.loadFullSet()
+trainSet = yd.loadFullSet().build_full_trainset()
 ratings = defaultdict(int)
 for uid, iid, rating in trainSet.all_ratings():
     ratings[rating] += 1

@@ -27,7 +27,7 @@ class YahooDataset:
         reader = Reader(line_format='user item rating timestamp' ,sep='\t', skip_lines=0)
         fullDataset = Dataset.load_from_file(self.fullSetPath, reader=reader)
 
-        return fullDataset.build_full_trainset()
+        return fullDataset
     
     def loadYahooPandasFullDataFrame(self):
         os.chdir(os.path.dirname(sys.argv[0]))
