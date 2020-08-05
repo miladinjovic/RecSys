@@ -73,7 +73,7 @@ print("\nComputing complete recommendations, no hold outs...")
 
 fullTrainSet = data.build_full_trainset()
 fullTrainSet.rating_scale = (1, 13)
-#algo.fit(fullTrainSet)
+algo.fit(fullTrainSet)
 #sim_options = {'name': 'pearson_baseline', 'user_based': False}
 #simsAlgo = KNNBaseline(sim_options=sim_options)
 #simsAlgo.fit(fullTrainSet)
