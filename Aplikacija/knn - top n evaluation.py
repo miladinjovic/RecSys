@@ -63,29 +63,29 @@ for trainSet, testSet in LOOCV.split(data):
     print("\nARHR (Average Reciprocal Hit Rank): ", RecommenderMetrics.AverageReciprocalHitRank(topNPredicted, leftOutPredictions))
 #    
         
-#print("\nComputing complete recommendations, no hold outs...")
-#
-#fullTrainSet = data.build_full_trainset()
-#fullTrainSet.rating_scale = (1, 13)
-#algo.fit(fullTrainSet)
+print("\nComputing complete recommendations, no hold outs...")
+
+fullTrainSet = data.build_full_trainset()
+fullTrainSet.rating_scale = (1, 13)
+algo.fit(fullTrainSet)
 ##sim_options = {'name': 'pearson_baseline', 'user_based': False}
 ##simsAlgo = KNNBaseline(sim_options=sim_options)
 ##simsAlgo.fit(fullTrainSet)
 #
-#topNPredicted = defaultdict(list)
-#for user in range(fullTrainSet.n_users):
-#    userID = int(fullTrainSet.to_raw_uid(user))
-#    antiTestSet = buildAntiTestSetForUser(user, fullTrainSet)
-#    predictions = algo.test(antiTestSet)
-#    
-#    topNPredicted[userID]=RecommenderMetrics.GetTopNForUser(predictions)
-#
+topNPredicted = defaultdict(list)
+for user in range(fullTrainSet.n_users):
+    userID = int(fullTrainSet.to_raw_uid(user))
+    antiTestSet = buildAntiTestSetForUser(user, fullTrainSet)
+    predictions = algo.test(antiTestSet)
+    
+    topNPredicted[userID]=RecommenderMetrics.GetTopNForUser(predictions)
+
 #
 #print("\nUser coverage: ", RecommenderMetrics.UserCoverage(topNPredicted, fullTrainSet.n_users))
 #
 ##print("\nDiversity: ", RecommenderMetrics.Diversity(topNPredicted, simsAlgo))
 #
-#rankings, _, _, _ = yd.loadMovies()
-#
-#print("\nNovelty (average popularity rank): ", RecommenderMetrics.Novelty(topNPredicted, rankings))
+rankings, _, _, _ = yd.loadMovies()
+
+print("\nNovelty (average popularity rank): ", RecommenderMetrics.Novelty(topNPredicted, rankings))
 

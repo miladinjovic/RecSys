@@ -165,7 +165,7 @@ class YahooDataset:
                           ngram_range=(1, 1),
                           # min_df=0.003,
                           # max_df=0.5,
-                          max_features=100,
+                          max_features=10,
                           stop_words=stopwords_list)
         
         

@@ -8,7 +8,7 @@ from surprise import AlgoBase
 
 class WeightedHybridAlgorithm(AlgoBase):
 
-    def __init__(self, algorithm1, algorithm2, weights=[]):
+    def __init__(self, algorithm1, algorithm2, weights=[0.6, 0.4]):
         AlgoBase.__init__(self)
         self.algorithm1 = algorithm1
         self.algorithm2 = algorithm2

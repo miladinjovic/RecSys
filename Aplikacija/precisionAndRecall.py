@@ -51,10 +51,10 @@ def precision_recall_at_k(predictions, k=10, threshold=3.5):
                               for (est, true_r) in user_ratings[:k])
 
         # Precision@K: Proportion of recommended items that are relevant
-        precisions[uid] = n_rel_and_rec_k / n_rec_k if n_rec_k != 0 else 1
+        precisions[uid] = n_rel_and_rec_k / n_rec_k if n_rec_k != 0 else 0
 
         # Recall@K: Proportion of relevant items that are recommended
-        recalls[uid] = n_rel_and_rec_k / n_rel if n_rel != 0 else 1
+        recalls[uid] = n_rel_and_rec_k / n_rel if n_rel != 0 else 0
 
     return precisions, recalls
 
@@ -109,14 +109,14 @@ plt.show()
 
     
 # algo = SVD(random_state = 0, reg_all=0.1, lr_all=0.003, n_factors=30, verbose=False)
-# algo = SVD()
+# algo = KNNBaseline(sim_options = {'name': 'cosine', 'user_based': False}, k=150)
 
 # for trainset, testset in yd.loadYahooDataset():
 #     trainset.rating_scale = (1, 13)
 #     algo.fit(trainset)
 #     predictions = algo.test(testset)
-#     precisions, recalls = precision_recall_at_k(predictions, k=10, threshold=9○)
+#     precisions, recalls = precision_recall_at_k(predictions, k=10, threshold=9.0)
 
-#     # Precision and recall can then be averaged over all users
+    # Precision and recall can then be averaged over all users
 #     print(sum(prec for prec in precisions.values()) / len(precisions))
 #     print(sum(rec for rec in recalls.values()) / len(recalls))

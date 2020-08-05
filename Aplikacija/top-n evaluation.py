@@ -38,10 +38,10 @@ data = yd.loadFullSet()
 svd = SVD(random_state = 0, reg_all=0.1, lr_all=0.003, n_factors=30, verbose=False)
 #svd = SVD(n_factors= 35, lr_all= 0.002, reg_all= 0.009000000000000001)
 knn = KNNBaseline(sim_options = {'name': 'cosine', 'user_based': False}, k=150)
-wh = WeightedHybridAlgorithm(svd, knn, [0.7,0.3])
+wh = WeightedHybridAlgorithm(svd, knn, [0.6, 0.4])
 contentKNN = ContentKNNAlgorithm()
 
-algo = svd  # Samo se dodeli promenljivoj algo neka od gore navedenih promenljivih (wh, knn ... ). Na taj način dobijamo evaluacuju odabranog algoritma.
+algo = svd  # Samo se dodeli promenljivoj algo neka od gore navedenih promenljivih (wh, knn ... ). Na taj način sprovodimo evaluaciju odabranog algoritma.
 
 LOOCV = LeaveOneOut(n_splits=1)
 
@@ -74,9 +74,9 @@ print("\nComputing complete recommendations, no hold outs...")
 fullTrainSet = data.build_full_trainset()
 fullTrainSet.rating_scale = (1, 13)
 algo.fit(fullTrainSet)
-#sim_options = {'name': 'pearson_baseline', 'user_based': False}
-#simsAlgo = KNNBaseline(sim_options=sim_options)
-#simsAlgo.fit(fullTrainSet)
+# #sim_options = {'name': 'pearson_baseline', 'user_based': False}
+# #simsAlgo = KNNBaseline(sim_options=sim_options)
+# #simsAlgo.fit(fullTrainSet)
 
 topNPredicted = defaultdict(list)
 for user in range(fullTrainSet.n_users):
@@ -87,9 +87,9 @@ for user in range(fullTrainSet.n_users):
     topNPredicted[userID]=RecommenderMetrics.GetTopNForUser(predictions)
 
 
-print("\nUser coverage: ", RecommenderMetrics.UserCoverage(topNPredicted, fullTrainSet.n_users))
-#
-#print("\nDiversity: ", RecommenderMetrics.Diversity(topNPredicted, simsAlgo))
+print("\nUser coverage: ", RecommenderMetrics.UserCoverage(to☺pNPredicted, fullTrainSet.n_users))
+
+# #print("\nDiversity: ", RecommenderMetrics.Diversity(topNPredicted, simsAlgo))
 
 rankings, _, _, _ = yd.loadMovies()
 
