@@ -30,7 +30,7 @@ class YahooDataset:
         return fullDataset
     
     def loadYahooPandasFullDataFrame(self):
-        os.chdir(os.path.dirname(sys.argv[0]))
+        # os.chdir(os.path.dirname(sys.argv[0]))
         data = pd.read_csv(self.fullSetPath, delimiter = '\t', header=None, 
                           names = ["userId", "movieId","rating"], usecols =["userId", "movieId", "rating"])
         return data
@@ -59,7 +59,7 @@ class YahooDataset:
     
     
     def loadDemographicsData(self):
-        os.chdir(os.path.dirname(sys.argv[0]))
+        # os.chdir(os.path.dirname(sys.argv[0]))
         data = pd.read_csv(self.usersPath, delimiter = '\t', header=None, 
                           names = ["userId", "year","gender"])
         return data
@@ -104,13 +104,13 @@ class YahooDataset:
         
         
     def loadYahooPandasTrainingDataFrame(self):
-        os.chdir(os.path.dirname(sys.argv[0]))
+        # os.chdir(os.path.dirname(sys.argv[0]))
         data = pd.read_csv(self.ratingsTrainPath, delimiter = '\t', header=None, 
                           names = ["userId", "movieId","rating"], usecols =["userId", "movieId", "rating"])
         return data
     
     def loadYahooPandasTestDataFrame(self):
-        os.chdir(os.path.dirname(sys.argv[0]))
+        # os.chdir(os.path.dirname(sys.argv[0]))
         data = pd.read_csv(self.ratingsTestPath, delimiter = '\t', header=None, 
                           names = ["userId", "movieId","rating"], usecols =["userId", "movieId", "rating"])
         return data
@@ -121,7 +121,7 @@ class YahooDataset:
     
     def loadYahooDataset(self):
         
-        os.chdir(os.path.dirname(sys.argv[0]))
+        # os.chdir(os.path.dirname(sys.argv[0]))
         reader = Reader(line_format='user item rating timestamp' ,sep='\t', skip_lines=0)
         
         data = Dataset.load_from_folds([(self.ratingsTrainPath, self.ratingsTestPath)], reader=reader)
@@ -131,7 +131,7 @@ class YahooDataset:
     
     def loadYahooTrainDataset(self):
 
-        os.chdir(os.path.dirname(sys.argv[0]))
+        # os.chdir(os.path.dirname(sys.argv[0]))
         reader = Reader(line_format='user item rating timestamp' ,sep='\t', skip_lines=0)
         ratingsTrainDataset = Dataset.load_from_file(self.ratingsTrainPath, reader=reader)
 
@@ -139,7 +139,7 @@ class YahooDataset:
     
     def loadYahooTestDataset(self):
         
-         os.chdir(os.path.dirname(sys.argv[0]))
+         # os.chdir(os.path.dirname(sys.argv[0]))
          reader = Reader(line_format='user item rating timestamp' ,sep='\t', skip_lines=0)
          ratingsTestDataset = Dataset.load_from_file(self.ratingsTestPath, reader=reader)
          
