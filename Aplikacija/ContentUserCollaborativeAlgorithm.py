@@ -99,6 +99,31 @@ class ContentUserCollaborativeAlgorithm(AlgoBase):
         thisMovieID = int(self.trainset.to_raw_iid(i))
         if (thisMovieID == 0):
             raise PredictionImpossible('Item has no content data.')
+        
+       simTotal = weightedSum = 0
+       numberOfNeighbors = 0
+       for otherUserId, similarity in self.nearestNeigbors[u]:
+            for movieId, rating in self.trainset.ur[otherUserId]:
+                if int(self.trainset.to_raw_iid(movieId)) == thisMovieID:
+                    simTotal += similarity
+                    weightedSum += simScore * rating
+        
+       if (simTotal == 0):
+            raise PredictionImpossible('No neighbors')
+       
+       predictedRating = weightedSum / simTotal
+       return predictedRating
+       
+
+   """ def estimate(self, u, i):
+        
+        if not self.trainset.knows_item(i):
+            raise PredictionImpossible('Item is unknown.')
+            
+        
+        thisMovieID = int(self.trainset.to_raw_iid(i))
+        if (thisMovieID == 0):
+            raise PredictionImpossible('Item has no content data.')
 
         neighbors = []
         for rating in self.trainset.ur[u]:
@@ -124,4 +149,9 @@ class ContentUserCollaborativeAlgorithm(AlgoBase):
 
         predictedRating = weightedSum / simTotal
         
-        return predictedRating
+        return predictedRating"""
+           
+            
+        
+
+       
