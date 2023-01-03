@@ -101,7 +101,6 @@ class ContentUserCollaborativeAlgorithm(AlgoBase):
             raise PredictionImpossible('Item has no content data.')
         
        simTotal = weightedSum = 0
-       numberOfNeighbors = 0
        for otherUserId, similarity in self.nearestNeigbors[u]:
             for movieId, rating in self.trainset.ur[otherUserId]:
                 if int(self.trainset.to_raw_iid(movieId)) == thisMovieID:
